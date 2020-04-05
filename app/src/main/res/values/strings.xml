@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Great Labyrinth</string>
+    <string name="play_button">Play</string>
+    <string name="exit_button">Exit</string>
+    <string name="game_name">Great Labyrinth</string>
+</resources>
