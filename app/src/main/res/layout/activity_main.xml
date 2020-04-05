@@ -32,6 +32,14 @@
                 android:text="@string/play_button"/>
 
             <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Settings"/>
+
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
