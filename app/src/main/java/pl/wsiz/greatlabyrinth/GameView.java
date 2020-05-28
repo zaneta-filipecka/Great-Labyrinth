@@ -16,14 +16,16 @@ import java.util.Stack;
 
 public class GameView extends View {
 
+    android.graphics.PointF ballPosition, ballSpeed;
+
     private enum Direction{
         up, down, left, right
     }
 
     private Cell[][] cells;
     private Cell player, exit;
-    private static final int columns = 7, rows = 10;
-    private static final float wallThickness = 4;
+    private static final int columns = 11, rows = 20;
+    private static final float wallThickness = 5;
     private float cellSize, hMargin, vMargin;
     private Paint wallPaint, playerPaint, exitPaint;
     private Random random;
@@ -135,7 +137,7 @@ public class GameView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawColor(Color.GREEN);
+        canvas.drawColor(Color.WHITE);
 
         int width = getWidth();
         int height = getHeight();
@@ -165,10 +167,10 @@ public class GameView extends View {
             }
         }
 
-        float margin = cellSize/10;
+        float margin = cellSize/2;
 
-        canvas.drawRect(player.column*cellSize+margin, player.row*cellSize+margin,(player.column+1)*cellSize-margin,(player.row+1)*cellSize-margin, playerPaint);
-        canvas.drawRect(exit.column*cellSize+margin, exit.row*cellSize+margin,(exit.column+1)*cellSize-margin,(exit.row+1)*cellSize-margin, exitPaint);
+        canvas.drawCircle(player.column*cellSize+margin, player.row*cellSize+margin,(cellSize/2)-5, playerPaint);
+        canvas.drawCircle(exit.column*cellSize+margin, exit.row*cellSize+margin,(cellSize/2)-5, exitPaint);
     }
 
     private void movePlayer(Direction direction){
