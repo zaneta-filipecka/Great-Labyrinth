@@ -16,8 +16,6 @@ import java.util.Stack;
 
 public class GameView extends View {
 
-    android.graphics.PointF ballPosition, ballSpeed;
-
     private enum Direction{
         up, down, left, right
     }
