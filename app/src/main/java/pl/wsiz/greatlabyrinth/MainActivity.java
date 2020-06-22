@@ -10,7 +10,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button playButton;
-    private Button settingsButton;
     private Button exitButton;
 
     @Override
@@ -24,16 +23,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, GameActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        settingsButton = (Button)findViewById(R.id.settingsButton);
-        settingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });

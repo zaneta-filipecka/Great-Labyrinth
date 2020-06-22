@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wielki Labirynt</string>
+    <string name="play_button">Graj</string>
+    <string name="exit_button">Wyjście</string>
+</resources>
